@@ -10,7 +10,7 @@ public class GopMang {
         int[] array1 = new int[size1];
         System.out.println("Nhập các phần tử mảng 1:");
         for (int i = 0; i < array1.length; i++) {
-            System.out.println("Nhập phần tử "+ (i+1) +" :");
+            System.out.println("Nhập phần tử " + (i + 1) + " :");
             array1[i] = Integer.parseInt(sc.nextLine());
         }
         System.out.println("Nhập kích thước mảng 2:");
@@ -18,18 +18,18 @@ public class GopMang {
         int[] array2 = new int[size2];
         System.out.println("Nhập các phần tử mảng 2:");
         for (int i = 0; i < array2.length; i++) {
-            System.out.println("Nhập phần tử "+ (i+1) +" :");
+            System.out.println("Nhập phần tử " + (i + 1) + " :");
             array2[i] = Integer.parseInt(sc.nextLine());
         }
         System.out.println("Mảng 1:");
         for (int i = 0; i < array1.length; i++) {
-            System.out.print(array1[i]+" ");
+            System.out.print(array1[i] + " ");
         }
         System.out.println("\nMảng 2:");
         for (int i = 0; i < array2.length; i++) {
-            System.out.print(array2[i]+" ");
+            System.out.print(array2[i] + " ");
         }
-        int[] array3 = new int[size1+size2];
+        int[] array3 = new int[size1 + size2];
         for (int i = 0; i < array1.length; i++) {
             array3[i] = array1[i];
         }
@@ -38,7 +38,7 @@ public class GopMang {
         }
         System.out.println("\nMảng 3:");
         for (int i = 0; i < array3.length; i++) {
-            System.out.print(array3[i]+" ");
+            System.out.print(array3[i] + " ");
         }
     }
 }
