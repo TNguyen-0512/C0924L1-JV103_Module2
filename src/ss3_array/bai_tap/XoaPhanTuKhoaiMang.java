@@ -1,8 +1,8 @@
 package ss3_array.bai_tap;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
-import java.util.Arrays;
+
 
 public class XoaPhanTuKhoaiMang {
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class XoaPhanTuKhoaiMang {
             for (int j : newArray) {
                 System.out.print(j + " ");
             }
-        }else{
+        } else {
             System.out.println("Không tìm thấy phần tử");
         }
     }
