@@ -1,9 +1,8 @@
 package ss2_loop.bai_tap;
 
-import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
 
-public class bai_1 {
+public class HienThiHinh {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("----Menu-----");
