@@ -66,8 +66,6 @@ public class HienThiHinh {
                 break;
             case "4":
                 break;
-            default:
-                System.out.println("Chỉ nhập từ 1 - 4");
         }
     }
 }
