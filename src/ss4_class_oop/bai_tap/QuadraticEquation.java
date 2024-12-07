@@ -1,6 +1,5 @@
 package ss4_class_oop.bai_tap;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class QuadraticEquation {
