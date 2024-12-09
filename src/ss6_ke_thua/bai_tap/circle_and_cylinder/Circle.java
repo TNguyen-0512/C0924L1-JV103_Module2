@@ -25,7 +25,7 @@ public class Circle {
     public void setColor(String color) {
         this.color = color;
     }
-    public double getArena(double radius) {
+    public double getArena() {
         return Math.PI * radius*radius;
     }
     public String toString() {

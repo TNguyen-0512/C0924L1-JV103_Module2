@@ -18,10 +18,10 @@ public class Cylinder extends Circle {
     public void setHeight(double height) {
         this.height = height;
     }
-    public double Volume(double height) {
-        return getArena(getRadius())*height;
+    public double Volume() {
+        return getArena()*height;
     }
     public String toString() {
-        return "Cylinder [radius=" + getRadius() + ", color=" + getColor() + ", hieght="+ height + ", Volume=" + Volume(getRadius()) + "]";
+        return "Cylinder [radius=" + getRadius() + ", color=" + getColor() + ", hieght="+ height + ", Volume=" + Volume() + "]";
     }
 }
