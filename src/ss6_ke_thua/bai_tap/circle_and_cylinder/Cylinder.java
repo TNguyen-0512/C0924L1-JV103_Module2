@@ -1,27 +1,27 @@
 package ss6_ke_thua.bai_tap.circle_and_cylinder;
 
 public class Cylinder extends Circle {
-    private double hieght;
+    private double height;
 
     public Cylinder(double radius, String color, double hieght) {
         super(radius, color);
-        this.hieght = hieght;
+        this.height = hieght;
     }
 
     public Cylinder() {
         super();
     }
 
-    public double getHieght() {
-        return hieght;
+    public double getHeight() {
+        return height;
     }
-    public void setHieght(double hieght) {
-        this.hieght = hieght;
+    public void setHeight(double height) {
+        this.height = height;
     }
-    public double Volume() {
-        return Math.PI * Math.pow(getRadius(), 2)*hieght;
+    public double Volume(double height) {
+        return getArena(getRadius())*height;
     }
     public String toString() {
-        return "Cylinder [radius=" + getRadius() + ", color=" + getColor() + ", hieght="+ hieght+ ", Volume=" + Volume() + "]";
+        return "Cylinder [radius=" + getRadius() + ", color=" + getColor() + ", hieght="+ height + ", Volume=" + Volume(getRadius()) + "]";
     }
 }
