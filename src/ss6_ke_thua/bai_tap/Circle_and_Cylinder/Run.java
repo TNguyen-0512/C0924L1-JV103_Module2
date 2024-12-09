@@ -4,8 +4,7 @@ public class Run {
     public static void main(String[] args) {
         Circle circle = new Circle(4,"Red");
         Cylinder cylinder = new Cylinder(circle.getRadius(), circle.getColor(), 6);
-        System.out.println(circle.toString());
-        System.out.println(cylinder.toString());
-
+        System.out.println(circle);
+        System.out.println(cylinder);
     }
 }

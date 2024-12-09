@@ -3,25 +3,25 @@ package ss6_ke_thua.bai_tap.Point2D_and_Point3D;
 import java.lang.reflect.Array;
 
 public class Point2D {
-    private double x= 0;
-    private double y = 0;
-    public Point2D(double x, double y) {
+    private float x= 0.0F;
+    private float y = 0.0F;
+    public Point2D(float x, float y) {
         this.x = x;
         this.y = y;
     }
     public Point2D() {
 
     }
-    public double getX() {
+    public float getX() {
         return x;
     }
-    public void setX(double x) {
+    public void setX(float x) {
         this.x = x;
     }
-    public double getY() {
+    public float getY() {
         return y;
     }
-    public void setY(double y) {
+    public void setY(float y) {
         this.y = y;
     }
     public void setXY(float x, float y){
@@ -34,9 +34,6 @@ public class Point2D {
 
     @Override
     public String toString() {
-        return "Point2D{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return "x "+x+" y "+y;
     }
 }
