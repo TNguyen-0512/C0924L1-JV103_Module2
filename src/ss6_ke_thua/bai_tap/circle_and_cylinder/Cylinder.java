@@ -1,4 +1,4 @@
-package ss6_ke_thua.bai_tap.Circle_and_Cylinder;
+package ss6_ke_thua.bai_tap.circle_and_cylinder;
 
 public class Cylinder extends Circle {
     private double hieght;

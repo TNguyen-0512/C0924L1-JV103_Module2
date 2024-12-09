@@ -1,6 +1,4 @@
-package ss6_ke_thua.bai_tap.Point2D_and_Point3D;
-
-import java.lang.reflect.Array;
+package ss6_ke_thua.bai_tap.point2d_and_point3d;
 
 public class Point2D {
     private float x= 0.0F;
