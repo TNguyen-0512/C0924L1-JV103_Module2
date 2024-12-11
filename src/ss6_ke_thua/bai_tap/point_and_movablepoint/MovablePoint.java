@@ -38,8 +38,8 @@ public class MovablePoint extends Point {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
-    public void getSpeed() {
-        float[] speed = new float[2];
+    public float [] getSpeed() {
+        return new float[2];
     }
 
     @Override

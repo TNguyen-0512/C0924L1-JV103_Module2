@@ -1,6 +1,8 @@
 package ss6_ke_thua.bai_tap.point2d_and_point3d;
 
 
+import ss6_ke_thua.bai_tap.point_and_movablepoint.MovablePoint;
+
 public class Run {
     public static void main(String[] args) {
         Point2D point2D = new Point2D(6,5);
