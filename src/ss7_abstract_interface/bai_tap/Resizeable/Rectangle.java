@@ -1,5 +1,7 @@
 package ss7_abstract_interface.bai_tap.Resizeable;
 
+import java.util.Random;
+
 public class Rectangle extends Shape {
     private double width = 1.0;
     private double length = 1.0;
@@ -50,5 +52,13 @@ public class Rectangle extends Shape {
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        Random random = new Random();
+        percent = 1 +random.nextDouble() *99;
+        this.width *= percent;
+        this.length *= percent;
     }
 }

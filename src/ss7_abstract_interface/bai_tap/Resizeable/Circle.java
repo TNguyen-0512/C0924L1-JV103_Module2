@@ -1,8 +1,10 @@
 package ss7_abstract_interface.bai_tap.Resizeable;
 
 
+import java.util.Random;
+import java.util.Scanner;
 
-public class Circle extends Shape implements Resizeable {
+public class Circle extends Shape  {
     private double radius = 1.0;
 
     public Circle() {
@@ -43,6 +45,8 @@ public class Circle extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
-
+        Random random = new Random();
+        percent = 1 + random.nextDouble() * 99;
+        this.radius *= percent;
     }
 }
