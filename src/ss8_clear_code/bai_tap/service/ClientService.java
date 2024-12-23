@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class ClientService implements IClientService {
-    private static final Client[] clients = new Client[10];
+    private static  Client[] clients = new Client[10];
 
     static {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
