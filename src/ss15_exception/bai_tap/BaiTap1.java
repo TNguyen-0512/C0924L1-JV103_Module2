@@ -20,7 +20,8 @@ public class BaiTap1 {
                 flag = false;
             } catch (IllegalAccessException e) {
                 if (canhA <= 0 || canhB <= 0 || canhC <= 0) {
-                  System.out.println("Số nhập phải lớn hơn 0");;
+                    System.out.println("Số nhập phải lớn hơn 0");
+                    ;
                 } else if (canhA + canhB <= canhC || canhC + canhA <= canhB || canhB + canhC <= canhA) {
                     System.out.println("Tổng 2 cạnh không lớn hơn cạnh còn lại");
                 }
@@ -36,9 +37,9 @@ public class BaiTap1 {
 
     public static boolean checkCanh(float canhA, float canhB, float canhC) throws IllegalAccessException {
         if (canhA <= 0 || canhB <= 0 || canhC <= 0) {
-            throw new IllegalAccessException("Số nhập phải lớn hơn 0");
+            throw new IllegalAccessException();
         } else if (canhA + canhB <= canhC || canhC + canhA <= canhB || canhB + canhC <= canhA) {
-            throw new IllegalAccessException("Tổng 2 cạnh không lớn hơn cạnh còn lại");
+            throw new IllegalAccessException();
         }
         return true;
     }
