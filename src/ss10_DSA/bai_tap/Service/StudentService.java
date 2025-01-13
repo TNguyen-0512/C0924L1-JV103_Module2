@@ -5,6 +5,7 @@ import ss10_DSA.bai_tap.model.Student;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 public class StudentService implements IStudentService {
     private static final ArrayList<Student> students = new ArrayList<>();
@@ -20,12 +21,12 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public ArrayList<Student> findAllStudent() {
+    public List<String> findAllStudent() {
         return students;
     }
 
     @Override
-    public ArrayList<Student> addStudent(Student student) {
+    public void addStudent(Student student) {
         students.add(student);
         return students;
     }

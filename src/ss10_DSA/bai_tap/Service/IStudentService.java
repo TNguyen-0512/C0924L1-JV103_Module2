@@ -4,13 +4,14 @@ import ss10_DSA.bai_tap.model.Student;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface IStudentService {
 
 
-    ArrayList<Student> findAllStudent();
+    List<String> findAllStudent();
 
-    ArrayList<Student> addStudent(Student student);
+    void addStudent(Student student);
 
     ArrayList<Student> updateStudent(int id, String name, int age, LocalDate birthday, String address);
 
