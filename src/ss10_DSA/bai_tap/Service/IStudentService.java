@@ -9,11 +9,11 @@ import java.util.List;
 public interface IStudentService {
 
 
-    List<String> findAllStudent();
+    List<Student> findAllStudent();
 
     void addStudent(Student student);
 
     ArrayList<Student> updateStudent(int id, String name, int age, LocalDate birthday, String address);
 
-    ArrayList<Student> deleteStudent(int id);
+    boolean deleteStudent(int id);
 }

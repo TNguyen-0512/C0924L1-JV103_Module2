@@ -21,7 +21,7 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public List<String> findAllStudent() {
+    public List<Student> findAllStudent() {
         return students;
     }
 
@@ -46,7 +46,7 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public ArrayList<Student> deleteStudent(int id) {
+    public boolean deleteStudent(int id) {
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i).getId() == id) {
                 students.remove(i);
