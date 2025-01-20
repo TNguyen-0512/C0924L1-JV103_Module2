@@ -11,7 +11,7 @@ import java.util.List;
 
 public class VehicleService {
     private final String CAR_FILE = "src/case_study/data/car.csv";
-    private final String TRUCK_FILE = "src/ss18_case_study/mvc/data/xeTai.csv";
+    private final String TRUCK_FILE = "src/case_study/data/truck.csv";
     private final String MOTORCYCLE_FILE = "src/case_study/data/truck.csv";
 
     public void addVehicle(Vehicle vehicle) {
