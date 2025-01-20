@@ -1,48 +1,50 @@
 package case_study.models;
 
-public class Vehicle {
-    private String numberPlate;
-    private String manuFacturer;
-    private int productionYear;
-    private String owner;
+public abstract class Vehicle {
+    protected String licensePlate;
+    protected String manufacturer;
+    protected int year;
+    protected String owner;
 
-    public Vehicle() {
-
-    }
-    public Vehicle(String numberPlate, String manuFacturer, int productionYear, String owner) {
-        this.numberPlate = numberPlate;
-        this.manuFacturer = manuFacturer;
-        this.productionYear = productionYear;
+    public Vehicle(String licensePlate, String manufacturer, int year, String owner) {
+        this.licensePlate = licensePlate;
+        this.manufacturer = manufacturer;
+        this.year = year;
         this.owner = owner;
     }
-    public String getNumberPlate() {
-        return numberPlate;
+
+    public String getLicensePlate() {
+        return licensePlate;
     }
-    public void setNumberPlate(String numberPlate) {
-        this.numberPlate = numberPlate;
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
-    public String getManuFacturer() {
-        return manuFacturer;
+
+    public String getManufacturer() {
+        return manufacturer;
     }
-    public void setManuFacturer(String manuFacturer) {
-        this.manuFacturer = manuFacturer;
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
-    public int getProductionYear() {
-        return productionYear;
+
+    public int getYear() {
+        return year;
     }
-    public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
+
+    public void setYear(int year) {
+        this.year = year;
     }
+
     public String getOwner() {
         return owner;
     }
+
     public void setOwner(String owner) {
         this.owner = owner;
     }
-    public String toString() {
-        return "NumberPlate: " + numberPlate +
-                "ManuFacturer: " + manuFacturer +
-                "ProductionYear: " + productionYear +
-                "Owner: " + owner ;
-    }
+
+    public abstract String toCSV();
+
 }

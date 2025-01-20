@@ -1,23 +1,34 @@
 package case_study.models;
 
 public class Truck extends Vehicle {
-    private double payLoad;
-    public Truck() {}
-    public Truck(String numberPlate, String manuFacturer, int productionYear, String owner, double payLoad) {
-        super(numberPlate, manuFacturer, productionYear, owner);
-        this.payLoad = payLoad;
+    private double loadCapacity; // in tons
+
+    public Truck(String licensePlate, String manufacturer, int year, String owner, double loadCapacity) {
+        super(licensePlate, manufacturer, year, owner);
+        this.loadCapacity = loadCapacity;
     }
-    public double getPayLoad() {
-        return payLoad;
+
+    public double getLoadCapacity() {
+        return loadCapacity;
     }
-    public void setPayLoad(double payLoad) {
-        this.payLoad = payLoad;
+
+    public void setLoadCapacity(double loadCapacity) {
+        this.loadCapacity = loadCapacity;
+    }
+
+    @Override
+    public String toCSV() {
+        return licensePlate + "," + manufacturer + "," + year + "," + owner + "," + loadCapacity;
     }
 
     @Override
     public String toString() {
-        return "Truck "+
-                super.toString()+
-                "payLoad: "+payLoad;
+        return "Truck { " +
+                "Biển số xe='" + licensePlate + '\'' +
+                ", Nhà sản xuất='" + manufacturer + '\'' +
+                ", Năm sản xuất=" + year +
+                ", Chủ sở hữu='" + owner + '\'' +
+                ", Trọng tải=" + loadCapacity +
+                '}';
     }
 }

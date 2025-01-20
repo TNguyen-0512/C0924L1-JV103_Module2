@@ -2,34 +2,44 @@ package case_study.models;
 
 public class Car extends Vehicle {
     private int seatCount;
-    private String carType;
-    public Car() {}
-    public Car(String numberPlate,String manuFacturer,int productionYear,String owner,int seatCount, String carType) {
-        super(numberPlate, manuFacturer, productionYear, owner);
+    private String type;
+
+    public Car(String licensePlate, String manufacturer, int year, String owner, int seatCount, String type) {
+        super(licensePlate, manufacturer, year, owner);
         this.seatCount = seatCount;
-        this.carType = carType;
+        this.type = type;
     }
+
     public int getSeatCount() {
         return seatCount;
     }
+
     public void setSeatCount(int seatCount) {
         this.seatCount = seatCount;
     }
-    public String getCarType() {
-        return carType;
+
+    public String getType() {
+        return type;
     }
-    public void setCarType(String carType) {
-        this.carType = carType;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toCSV() {
+        return licensePlate + "," + manufacturer + "," + year + "," + owner + "," + seatCount + "," + type;
     }
 
     @Override
     public String toString() {
-        return "Car" +
-                "NumberPlate: "+ super.getNumberPlate() +
-                "ManuFacturer: "+ super.getManuFacturer() +
-                "ProductionYear: "+ super.getProductionYear() +
-                "Owner: "+ super.getOwner() +
-                "SeatCount: " + seatCount +
-                "CarType: " + carType  ;
+        return "Car { " +
+                "Biển số xe='" + licensePlate + '\'' +
+                ", Nhà sản xuất='" + manufacturer + '\'' +
+                ", Năm sản xuất=" + year +
+                ", Chủ sở hữu='" + owner + '\'' +
+                ", Số chỗ ngồi=" + seatCount +
+                ", Kiểu xe='" + type + '\'' +
+                '}';
     }
 }

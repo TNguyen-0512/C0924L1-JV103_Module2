@@ -5,38 +5,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWriteFile {
-    private static final String FILE_PATH = "src/case_study/data";
+    public static void writeFile(String filePath, List<String> stringList, boolean append) {
+        File file = new File(filePath);
 
-    public static List<String> readFile(String fileName) {
-        List<String> list = new ArrayList<String>();
-        try(BufferedReader br = new BufferedReader(new FileReader(FILE_PATH + fileName))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, append))) {
+            for (String line : stringList) {
+                bufferedWriter.write(line);
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Lỗi ghi file: " + e.getMessage());
+        }
+    }
+
+    public static List<String> readFile(String filePath) {
+        List<String> stringList = new ArrayList<>();
+        File file = new File(filePath);
+
+        if (!file.exists()) {
+            return stringList;
+        }
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String line;
-            while((line = br.readLine()) != null){
-                list.add(line);
+            while ((line = bufferedReader.readLine()) != null) {
+                stringList.add(line);
             }
         } catch (IOException e) {
-           System.out.println("Lỗi đọc file !!!" + e.getMessage());
+            System.out.println("Lỗi đọc file: " + e.getMessage());
         }
-        return list;
-    }
-    public static void writeFile(String fileName, List<String> list) {
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH + fileName))) {
-            for(String str : list){
-                bw.write(str);
-                bw.newLine();
-            }
-        }catch (IOException e){
-            System.out.println("Lỗi ghi file !!!" + e.getMessage());
-        }
-    }
-    public static void ownerWriteFile(String fileName, List<String> list) {
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH + fileName))){
-            for(String str : list){
-                bw.write(str);
-                bw.newLine();
-            }
-        } catch (IOException e) {
-            System.out.println("Lỗi ghi file !!!" + e.getMessage());
-        }
+
+        return stringList;
     }
 }
